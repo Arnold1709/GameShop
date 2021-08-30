@@ -53,3 +53,4 @@ D:\ÁRCHIVOS\proyectos\progra 1\lab\GameShop\bin\Debug\net5.0\Microsoft.Extensio
 D:\ÁRCHIVOS\proyectos\progra 1\lab\GameShop\bin\Debug\net5.0\Npgsql.dll
 D:\ÁRCHIVOS\proyectos\progra 1\lab\GameShop\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\ÁRCHIVOS\proyectos\progra 1\lab\GameShop\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\ÁRCHIVOS\proyectos\progra 1\lab\GameShop\obj\Debug\net5.0\Razor\Views\Producto\Create.cshtml.g.cs

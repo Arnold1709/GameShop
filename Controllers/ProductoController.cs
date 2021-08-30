@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using GameShop.Models;
 using GameShop.Data;
+using System.Linq;
 
 namespace GameShop.Controllers
 {
@@ -16,35 +17,23 @@ namespace GameShop.Controllers
 
          public IActionResult Index()
         {
-            return View();
+           return View(_context.DataProductos.ToList());
         }
       
-
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
          public IActionResult Create(Producto objProducto)
         {
 
             _context.Add(objProducto);
             _context.SaveChanges();
             ViewData["Message"] = "El producto ya esta registrado";
-            return View("Index");
+            return View();
         }
-     /*[HttpPost]*/
-        /*    public IActionResult Oferta (Producto objproducto)
-        {
-
-
-             decimal operacion=0;
-            ViewData["Message"] = "Sin resultado";
-            if(((long)objproducto.precio)>0){
-                operacion =objproducto.precio- (objproducto.precio * (objproducto.descuento/100));
-                ViewData["Message"] = "El precio a pagar es "+ operacion;
-            }else{
-                ViewData["Message"] = "Sin resultado";
-            }
-            return View("index");
-                
-        }
-        */
+     
     }
 
 }
