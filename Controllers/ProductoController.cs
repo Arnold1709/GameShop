@@ -53,7 +53,15 @@ namespace GameShop.Controllers
               ViewData["Message"] = "El contacto ya esta actualizado";
              return View(objProducto);
         }
-     
+
+
+         public IActionResult Delete(int id)
+        {
+            Producto objProducto = _context.DataProductos.Find(id);
+            _context.DataProductos.Remove(objProducto);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 
 }
