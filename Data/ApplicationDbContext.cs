@@ -5,10 +5,12 @@ namespace GameShop.Data
 {
     public class ApplicationDbContext:IdentityDbContext
     {
-                public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
 
         }
+
+        public DbSet<GameShop.Models.Producto> DataProductos { get; set; }
     }
 }

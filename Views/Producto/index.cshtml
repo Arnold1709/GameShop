@@ -1,6 +1,6 @@
 @model GameShop.Models.Producto
 @{
-    ViewData["Title"] = "COMPRANADO EN LÍNEA";
+    ViewData["Title"] = "COMPRANDO EN LÍNEA";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -9,7 +9,7 @@
     <h1 class="display-4">Seleccionar y comprar un producto</h1>
 
    
-  <form asp-controller="Producto" asp-action="Oferta">
+  <form asp-controller="Producto" asp-action="create">
         <label asp-for="nombre" class="form-label"></label>
         <input asp-for="nombre" class="form-control form-control-sm" type="text" placeholder="Escribe el nombre dle producto" aria-label=".form-control-sm" />
 
@@ -19,14 +19,17 @@
         <label asp-for="descuento" class="form-label"></label>
         <input asp-for="descuento" class="form-control form-control-sm" type="text" placeholder=" Descuento en %" aria-label=".form-control-sm" />    
 
+     
+
        <label asp-for="categoria" class="control-label"></label>
-        <select asp-for="categoria" >
-            <option value=" ">Edad de 10 a 15</option>
-            <option value=" ">Edad de 15 a 25</option>
-            <option value=" ">Edad de 25 a 30</option>
-            <option value=" ">Edad de 30 a más</option>
-        </select>
-      
+        Edad de 10 a 15 años
+        <input asp-for="categoria" class="form-control" type="radio" value="Edad de 10 a 15" />
+       Edad de 15 a 25
+        <input asp-for="categoria" class="form-control" type="radio" value="Edad de 15 a 25" />
+        Edad de 25 a 30
+        <input asp-for="categoria" class="form-control" type="radio" value="Edad de 25 a 30" />
+        Edad de 30 a más
+        <input asp-for="categoria" class="form-control" type="radio" value="Edad de 30 a más" />
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Calcular</button> 
@@ -34,3 +37,12 @@
     </form>
       <h1>@ViewData["Message"]</h1>
 </div>
+
+  <!-- <label asp-for="categoria" class="control-label"></label>
+        <select asp-for="categoria" >
+            <option value=" ">Edad de 10 a 15</option>
+            <option value=" ">Edad de 15 a 25</option>
+            <option value=" ">Edad de 25 a 30</option>
+            <option value=" ">Edad de 30 a más</option>
+        </select>
+        -!>
