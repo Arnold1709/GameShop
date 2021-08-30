@@ -33,6 +33,26 @@ namespace GameShop.Controllers
             ViewData["Message"] = "El producto ya esta registrado";
             return View();
         }
+
+
+
+         public IActionResult Edit(int id)
+        {
+            Producto objProducto = _context.DataProductos.Find(id);
+            if(objProducto == null){
+                return NotFound();
+            }
+            return View(objProducto);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id,[Bind("id,nombre,precio,descuento,categoria")] Producto objProducto)
+        {
+             _context.Update(objProducto);
+             _context.SaveChanges();
+              ViewData["Message"] = "El contacto ya esta actualizado";
+             return View(objProducto);
+        }
      
     }
 
