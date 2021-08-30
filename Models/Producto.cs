@@ -15,9 +15,9 @@ namespace GameShop.Models
          [Column("nombre")]
         public string nombre{ get; set; }
          [Column("precio")]
-        public decimal precio {get; set;}
+        public double precio {get; set;}
          [Column("descuento")]
-        public decimal descuento {get; set;}
+        public double descuento {get; set;}
          [Column("categoria")]
         public string categoria {get; set;}
 
